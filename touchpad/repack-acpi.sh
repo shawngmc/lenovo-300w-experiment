@@ -3,5 +3,5 @@ cd /tmp/acpi
 
 mkdir -pv kernel/firmware/acpi
 cp dsdt.aml kernel/firmware/acpi
-find kernel | pio -H newc --create > /boot/instumented_initrd
-cat /boot/initrd >> /boot/instrumented_initrd
+find kernel | cpio -H newc --create > /boot/mod_initrd.img
+cat /boot/initrd.img >> /boot/mod_initrd.img
